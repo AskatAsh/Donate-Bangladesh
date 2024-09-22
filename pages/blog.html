@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Bangladesh</title>
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- tailwind and daisyUI cdn links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- custom tailwind classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        btn_bg: '#B4F461',
+                        btn_light: '#F2F2F2',
+                        btn_border: '#1111114d',
+                        txt: '#111111',
+                        txt_light: '#111111b3',
+                        light_border: '#1111111a',
+                        head_bg: '#F9F7F3'
+                    },
+                    fontFamily: {
+                        lexend: ["Lexend", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-lexend">
+    <header class="mb-10">
+        <!-- navbar -->
+        <nav class="bg-head_bg py-6">
+            <div
+                class="max-w-6xl w-11/12 mx-auto flex items-center justify-center sm:justify-between gap-4 sm:gap-0 flex-wrap text-txt">
+                <a href="./blog.html"
+                    class="bg-btn_bg font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg">Blog</a>
+                <a href="../index.html" class="flex items-center gap-2 font-semibold sm:text-xl">
+                    <img class="w-8 sm:w-auto" src="../assets/logo.png" alt="logo of donate bangladesh">
+                    Donate Bangladesh
+                </a>
+                <div class="flex items-center gap-2 font-semibold sm:text-xl text-txt_light">
+                    <img class="w-6 sm:w-auto" src="../assets/coin.png" alt="icon of a coin">
+                    <span>5500</span>BDT
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl w-11/12 mx-auto">
+        <section class="flex flex-col gap-5">
+            <div class="collapse collapse-arrow border-2 border-btn_border">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-txt text-lg sm:text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content text-txt_light">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea minima placeat provident in necessitatibus, magnam ipsa? Fugiat laborum ipsa possimus odit eius a illum reprehenderit, est quia quaerat culpa.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow border-2 border-btn_border">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-txt text-lg sm:text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content text-txt_light">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea minima placeat provident in necessitatibus, magnam ipsa? Fugiat laborum ipsa possimus odit eius a illum reprehenderit, est quia quaerat culpa.</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+
+</html>
