@@ -8,10 +8,37 @@
     <!-- tailwind and daisyUI cdn links -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- custom tailwind classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        btn_bg: '#B4F461',
+                        btn_bg_light: '#F2F2F2',
+                        btn_border: '#1111114d',
+                        txt: '#111111',
+                        txt_light: '#111111b3',
+                        light_border: '#1111111a',
+                        head_bg: '#F9F7F3'
+                    },
+                    fontFamily: {
+                        lexend: ["Lexend", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
-    
+
 </body>
 
 </html>
