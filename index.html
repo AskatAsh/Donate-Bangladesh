@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Bangladesh</title>
+
+    <!-- custom styles -->
+     <link rel="stylesheet" href="./styles.css">
+
     <!-- tailwind and daisyUI cdn links -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,7 +25,7 @@
                 extend: {
                     colors: {
                         btn_bg: '#B4F461',
-                        btn_bg_light: '#F2F2F2',
+                        btn_light: '#F2F2F2',
                         btn_border: '#1111114d',
                         txt: '#111111',
                         txt_light: '#111111b3',
@@ -39,19 +43,40 @@
 
 <body class="font-lexend">
     <!-- header section -->
-     <header class="bg-head_bg py-6">
-        <nav class="max-w-6xl w-11/12 mx-auto flex items-center justify-center sm:justify-between gap-4 sm:gap-0 flex-wrap text-txt">
-            <button class="bg-btn_bg font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg">Blog</button>
-            <div class="flex items-center gap-2 font-semibold sm:text-xl">
-                <img class="w-8 sm:w-auto" src="./assets/logo.png" alt="logo of donate bangladesh">
-                Donate Bangladesh
-            </div>
-            <div class="flex items-center gap-2 font-semibold sm:text-xl text-txt_light">
-                <img class="w-6 sm:w-auto" src="./assets/coin.png" alt="icon of a coin">
-                <span>5500</span>BDT
+    <header class="sticky top-0 backdrop-blur-sm">
+        <!-- navbar -->
+        <nav class="bg-head_bg py-6">
+            <div class="max-w-6xl w-11/12 mx-auto flex items-center justify-center sm:justify-between gap-4 sm:gap-0 flex-wrap text-txt">
+                <button class="bg-btn_bg font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg">Blog</button>
+                <div class="flex items-center gap-2 font-semibold sm:text-xl">
+                    <img class="w-8 sm:w-auto" src="./assets/logo.png" alt="logo of donate bangladesh">
+                    Donate Bangladesh
+                </div>
+                <div class="flex items-center gap-2 font-semibold sm:text-xl text-txt_light">
+                    <img class="w-6 sm:w-auto" src="./assets/coin.png" alt="icon of a coin">
+                    <span>5500</span>BDT
+                </div>
             </div>
         </nav>
-     </header>
+
+        <!-- tab section -->
+        <section id="tabs" class="pt-10 pb-8">
+            <div class="flex items-center justify-center gap-4 sm:gap-6">
+                <button
+                    class="bg-white font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg border-2 border-btn_border text-txt_light ">Donation</button>
+                <button
+                    class="bg-white font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg border-2 border-btn_border text-txt_light active">History</button>
+            </div>
+        </section>
+    </header>
+
+    <main class="max-w-6xl w-11/12 mx-auto">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto quo beatae numquam libero nemo vel omnis similique alias, at ipsa dicta perspiciatis excepturi possimus ab suscipit repudiandae earum obcaecati nesciunt itaque iste molestias officia. Quae sint quisquam, delectus ut vitae recusandae aut quis vel nostrum. Necessitatibus delectus, harum ullam dolores amet asperiores molestiae possimus quas eius totam, sequi animi repudiandae incidunt quibusdam, error assumenda provident corrupti accusantium! Nulla aspernatur ex dignissimos hic laudantium, consectetur maiores similique sint eius repellat, facere in totam sapiente qui accusantium dolor dolorum. Enim aut doloremque sint maiores saepe iusto expedita, in reprehenderit quibusdam nam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto quo beatae numquam libero nemo vel omnis similique alias, at ipsa dicta perspiciatis excepturi possimus ab suscipit repudiandae earum obcaecati nesciunt itaque iste molestias officia. Quae sint quisquam, delectus ut vitae recusandae aut quis vel nostrum. Necessitatibus delectus, harum ullam dolores amet asperiores molestiae possimus quas eius totam, sequi animi repudiandae incidunt quibusdam, error assumenda provident corrupti accusantium! Nulla aspernatur ex dignissimos hic laudantium, consectetur maiores similique sint eius repellat, facere in totam sapiente qui accusantium dolor dolorum. Enim aut doloremque sint maiores saepe iusto expedita, in reprehenderit quibusdam nam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto quo beatae numquam libero nemo vel omnis similique alias, at ipsa dicta perspiciatis excepturi possimus ab suscipit repudiandae earum obcaecati nesciunt itaque iste molestias officia. Quae sint quisquam, delectus ut vitae recusandae aut quis vel nostrum. Necessitatibus delectus, harum ullam dolores amet asperiores molestiae possimus quas eius totam, sequi animi repudiandae incidunt quibusdam, error assumenda provident corrupti accusantium! Nulla aspernatur ex dignissimos hic laudantium, consectetur maiores similique sint eius repellat, facere in totam sapiente qui accusantium dolor dolorum. Enim aut doloremque sint maiores saepe iusto expedita, in reprehenderit quibusdam nam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto quo beatae numquam libero nemo vel omnis similique alias, at ipsa dicta perspiciatis excepturi possimus ab suscipit repudiandae earum obcaecati nesciunt itaque iste molestias officia. Quae sint quisquam, delectus ut vitae recusandae aut quis vel nostrum. Necessitatibus delectus, harum ullam dolores amet asperiores molestiae possimus quas eius totam, sequi animi repudiandae incidunt quibusdam, error assumenda provident corrupti accusantium! Nulla aspernatur ex dignissimos hic laudantium, consectetur maiores similique sint eius repellat, facere in totam sapiente qui accusantium dolor dolorum. Enim aut doloremque sint maiores saepe iusto expedita, in reprehenderit quibusdam nam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto quo beatae numquam libero nemo vel omnis similique alias, at ipsa dicta perspiciatis excepturi possimus ab suscipit repudiandae earum obcaecati nesciunt itaque iste molestias officia. Quae sint quisquam, delectus ut vitae recusandae aut quis vel nostrum. Necessitatibus delectus, harum ullam dolores amet asperiores molestiae possimus quas eius totam, sequi animi repudiandae incidunt quibusdam, error assumenda provident corrupti accusantium! Nulla aspernatur ex dignissimos hic laudantium, consectetur maiores similique sint eius repellat, facere in totam sapiente qui accusantium dolor dolorum. Enim aut doloremque sint maiores saepe iusto expedita, in reprehenderit quibusdam nam.</p>
+    </main>
 </body>
 
 </html>
