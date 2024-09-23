@@ -14,8 +14,11 @@ function input_valid(input){
 donate_buttons.forEach(donate_btn => {
     donate_btn.addEventListener("click", function(e){
         e.preventDefault();
-        const donation_input = e.target.parentElement.querySelector("input").value;
-        console.log(+donation_input);
-        input_valid(+donation_input);
+        const donation_input = Number(e.target.parentElement.querySelector("input").value);
+        const cash = e.target.parentElement.parentElement.querySelector(".cash");
+        // console.log(+donation_input);
+        if(input_valid(donation_input)){
+            cash.innerText = +cash.innerText + donation_input;
+        }
     })
 })
