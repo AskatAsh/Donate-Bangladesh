@@ -4,7 +4,7 @@ const transactions_history = document.getElementById("transactions");
 
 // input validation
 function input_valid(input) {
-  if (input === "" || isNaN(input) || input < 0) {
+  if (input === "" || isNaN(input) || input <= 0) {
     alert("Please enter a valid number as input [e.g. 0,1,2..7,8,9]");
     return false;
   } else {
@@ -19,7 +19,7 @@ function get_datetime(e) {
 }
 
 // get donation title and show it in history
-function get_donation_title(e, donation) {
+function get_donation_history(e, donation) {
   const date_time = get_datetime(e);
   const title =
     e.target.parentElement.parentElement.querySelector(
@@ -54,16 +54,15 @@ donate_buttons.forEach((donate_btn) => {
       } else {
         cash.innerText = +cash.innerText + donation_input;
         total_savings.innerText = savings_left;
+        // show modal for successful donation
+        my_modal_1.showModal();
 
-        get_donation_title(e, donation_input);
+        get_donation_history(e, donation_input);
 
         // clear all inputs
         donate_buttons.forEach((donate_btn) => {
-          e.target.parentElement.querySelector("input").value = "";
+            e.target.parentElement.querySelector("input").value = "";
         });
-
-        // show modal for successful donation
-        my_modal_1.showModal();
       }
     }
   });
