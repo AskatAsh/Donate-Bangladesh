@@ -46,7 +46,7 @@ donate_buttons.forEach((donate_btn) => {
       e.target.parentElement.querySelector("input").value
     );
     const cash = e.target.parentElement.parentElement.querySelector(".cash");
-    // console.log(+donation_input);
+
     if (input_valid(donation_input)) {
       const savings_left = +total_savings.innerText - donation_input;
       if (savings_left < 0 || +total_savings.innerText === 0) {
@@ -61,8 +61,10 @@ donate_buttons.forEach((donate_btn) => {
         donate_buttons.forEach((donate_btn) => {
           e.target.parentElement.querySelector("input").value = "";
         });
+
+        // show modal for successful donation
+        my_modal_1.showModal();
       }
-      // my_modal_1.showModal();
     }
   });
 });
