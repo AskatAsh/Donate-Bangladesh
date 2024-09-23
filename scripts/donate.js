@@ -12,6 +12,12 @@ function input_valid(input){
     }
 }
 
+function get_donation_title(e){
+    const title = e.target.parentElement.parentElement.querySelector("#donation_title").innerText;
+    const title_shorten = title.substr(title.indexOf("for"), title.length);
+    console.log(title_shorten);
+}
+
 donate_buttons.forEach(donate_btn => {
     donate_btn.addEventListener("click", function(e){
         e.preventDefault();
@@ -25,6 +31,13 @@ donate_buttons.forEach(donate_btn => {
             }else{
                 cash.innerText = +cash.innerText + donation_input;
                 total_savings.innerText = savings_left;
+
+                get_donation_title(e);
+
+                // clear all inputs
+                donate_buttons.forEach(donate_btn => {
+                    e.target.parentElement.querySelector("input").value = "";
+                })
             }
             // my_modal_1.showModal();
         }
