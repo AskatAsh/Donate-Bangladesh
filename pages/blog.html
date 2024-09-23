@@ -61,35 +61,41 @@
         </nav>
     </header>
 
-    <main class="max-w-6xl w-11/12 mx-auto">
+    <main class="max-w-6xl w-11/12 mx-auto my-10">
         <h1 class="text-2xl sm:text-4xl font-bold mb-5 flex gap-4">Important FAQ <img class="sm:w-10" src="../assets/faq-icon.png" alt="faq icon"></h1>
         <section class="flex flex-col gap-5">
             <div class="collapse collapse-arrow border border-btn_border">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-txt text-lg sm:text-xl font-medium">What is the Document Object Model (DOM)?</div>
-                <div class="collapse-content text-txt_light">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea minima placeat provident in necessitatibus, magnam ipsa? Fugiat laborum ipsa possimus odit eius a illum reprehenderit, est quia quaerat culpa.</p>
+                <div class="collapse-content text-txt_light flex flex-col gap-3">
+                    <p>Document Object Model (DOM) is a Tree like structure which helps javascript to interact with html elements, structure, styles of a web page.</p>
+                    <p>Some key components of DOM are: Nodes, Elements, Attribute, Functions or Methods etc.</p>
+                    <p>We can use DOM to: Select Elements, Create Elements, Adding and Removing Elements and much more.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow border border-btn_border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-txt text-lg sm:text-xl font-medium">How do you select an element from the DOM?</div>
-                <div class="collapse-content text-txt_light">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea minima placeat provident in necessitatibus, magnam ipsa? Fugiat laborum ipsa possimus odit eius a illum reprehenderit, est quia quaerat culpa.</p>
+                <div class="collapse-content text-txt_light flex flex-col gap-3">
+                    <p>Using methods like: getElementById(), getElementsByClassName(), and querySelector() we can select any element from DOM.</p>
+                    <p>For Example: "const box = document.getElementById("myBox");" this code selects any element with id myBox.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow border border-btn_border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-txt text-lg sm:text-xl font-medium">What is event delegation in the context of DOM, and why it is useful?</div>
-                <div class="collapse-content text-txt_light">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea minima placeat provident in necessitatibus, magnam ipsa? Fugiat laborum ipsa possimus odit eius a illum reprehenderit, est quia quaerat culpa.</p>
+                <div class="collapse-content text-txt_light flex flex-col gap-3">
+                    <p>Event Delegation in the context of DOM means the process of attaching an event listener to a parent element and then handling events that bubble up from its child elements.</p>
+                    <p>It is useful because it makes the code more simple and easy to understand also improving performance.</p>
+                    <p>By using a single event listener on a parent element, we can avoid writing repetitive code for each child element. This makes the code more concise and easy to maintain.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow border border-btn_border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-txt text-lg sm:text-xl font-medium">How do you manipulate an element's attributes and styles using DOM?</div>
-                <div class="collapse-content text-txt_light">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea minima placeat provident in necessitatibus, magnam ipsa? Fugiat laborum ipsa possimus odit eius a illum reprehenderit, est quia quaerat culpa.</p>
+                <div class="collapse-content text-txt_light flex flex-col gap-3">
+                    <p>By using getAttribute(), setAttribute(), removeAttribute() methods we can Access and Modify attributes of any elements.</p>
+                    <p>We can use the style property of DOM elements to modify styles. For Example: "const box = document.getElementById('myBox'); box.style.backgroundColor = 'green';" this code changes the background color of the selected element to green.</p>
                 </div>
             </div>
         </section>
