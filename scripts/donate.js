@@ -19,6 +19,7 @@ donate_buttons.forEach(donate_btn => {
         // console.log(+donation_input);
         if(input_valid(donation_input)){
             cash.innerText = +cash.innerText + donation_input;
+            my_modal_1.showModal();
         }
     })
 })
