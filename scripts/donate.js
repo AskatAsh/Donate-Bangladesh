@@ -36,6 +36,7 @@ function get_donation_history(e, donation) {
             Date : ${date_time}
         </p>`;
   li.className = "border-2 border-light_border rounded-2xl p-5 sm:p-8";
+  transactions_history.innerHTML = "";
   transactions_history.appendChild(li);
 }
 
