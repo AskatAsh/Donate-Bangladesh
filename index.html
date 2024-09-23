@@ -7,7 +7,7 @@
     <title>Donation Bangladesh</title>
 
     <!-- custom styles -->
-     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css">
 
     <!-- tailwind and daisyUI cdn links -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -30,7 +30,8 @@
                         txt: '#111111',
                         txt_light: '#111111b3',
                         light_border: '#1111111a',
-                        head_bg: '#F9F7F3'
+                        head_bg: '#F9F7F3',
+                        bg_light: '#1111110d'
                     },
                     fontFamily: {
                         lexend: ["Lexend", "sans-serif"]
@@ -46,8 +47,10 @@
     <header class="sticky top-0 backdrop-blur-sm">
         <!-- navbar -->
         <nav class="bg-head_bg py-6">
-            <div class="max-w-6xl w-11/12 mx-auto flex items-center justify-center sm:justify-between gap-4 sm:gap-0 flex-wrap text-txt">
-                <a href="./pages/blog.html" class="bg-btn_bg font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg">Blog</a>
+            <div
+                class="max-w-6xl w-11/12 mx-auto flex items-center justify-center sm:justify-between gap-4 sm:gap-0 flex-wrap text-txt">
+                <a href="./pages/blog.html"
+                    class="bg-btn_bg font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg">Blog</a>
                 <a href="./index.html" class="flex items-center gap-2 font-semibold sm:text-xl">
                     <img class="w-8 sm:w-auto" src="./assets/logo.png" alt="logo of donate bangladesh">
                     Donate Bangladesh
@@ -63,17 +66,41 @@
         <section id="tabs" class="pt-10 pb-8">
             <div class="flex items-center justify-center gap-4 sm:gap-6">
                 <button
-                    class="tabs_btn bg-white font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg border-2 border-btn_border text-txt_light ">Donation</button>
+                    class="tabs_btn bg-white font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg border-2 border-btn_border text-txt_light active">Donation</button>
                 <button
-                    class="tabs_btn bg-white font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg border-2 border-btn_border text-txt_light active">History</button>
+                    class="tabs_btn bg-white font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg border-2 border-btn_border text-txt_light">History</button>
             </div>
         </section>
     </header>
 
     <main class="max-w-6xl w-11/12 mx-auto">
         <section class="donation_content">
-            <h2>Donation Content</h2>
+            <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
+                <div class="w-full md:w-80 lg:max-w-lg lg:w-full overflow-hidden rounded-2xl">
+                    <img class="w-full h-full object-cover" src="./assets/noakhali.png" alt="image of noakhali flood relief team">
+                </div>
+                <div class="flex flex-col gap-4 flex-1">
+                    <div class="flex gap-1 bg-bg_light rounded-lg p-3 text-txt_light w-fit">
+                        <img class="w-6" src="./assets/coin.png" alt="coin icon">
+                        <span class="cash">00</span>BDT
+                    </div>
+                    <h1 class="text-txt font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="text-txt_light font-normal"> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                        donation will help provide essential supplies and to those affected by this disaster. Every
+                        contribution, big or small, makes difference. Please join us in supporting the relief efforts
+                        and making a positive impact on the lives of those in need.</p>
+                    <form class="flex flex-col gap-4 flex-1 justify-end">
+                        <input class="border border-light_border rounded-xl p-4 placeholder:font-light placeholder:text-txt_light text-txt"
+                            type="text" placeholder="Write Donation Amount">
+                        <button class="bg-btn_bg font-semibold sm:text-xl py-2 px-6 sm:py-3 sm:px-8 rounded-lg">Donate
+                            Now</button>
+                    </form>
+                </div>
+
+            </div>
         </section>
+
+        <!-- transactions history -->
         <section class="history_content">
             <ul id="transactions" class="text-txt flex flex-col gap-6">
                 <li class="border-2 border-light_border rounded-2xl p-5 sm:p-8">
@@ -91,7 +118,7 @@
 
 
     <!-- script files -->
-     <script src="./scripts/tabs.js"></script>
+    <script src="./scripts/tabs.js"></script>
 </body>
 
 </html>
