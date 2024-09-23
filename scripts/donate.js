@@ -13,7 +13,15 @@ function input_valid(input) {
   }
 }
 
+function get_datetime(e){
+    const date_time = new Date;
+    console.log(date_time);
+    return date_time;
+}
+
+// get donation title and show it in history
 function get_donation_title(e, donation) {
+    const date_time = get_datetime(e);
   const title =
     e.target.parentElement.parentElement.querySelector(
       "#donation_title"
@@ -26,8 +34,7 @@ function get_donation_title(e, donation) {
             ${donation} Taka is Donated ${title_shortened}
         </h3>
         <p class="font-light pt-4">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard
-                        Time)
+            Date : ${date_time}
         </p>`;
     li.className = "border-2 border-light_border rounded-2xl p-5 sm:p-8";
     transactions_history.appendChild(li);
