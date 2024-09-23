@@ -1,5 +1,6 @@
 const donate_buttons = document.querySelectorAll("#donate_btn");
-console.log(donate_buttons);
+// console.log(donate_buttons);
+const total_savings = document.getElementById("savings");
 
 // input validation
 function input_valid(input){
@@ -18,8 +19,14 @@ donate_buttons.forEach(donate_btn => {
         const cash = e.target.parentElement.parentElement.querySelector(".cash");
         // console.log(+donation_input);
         if(input_valid(donation_input)){
-            cash.innerText = +cash.innerText + donation_input;
-            my_modal_1.showModal();
+            const savings_left = +total_savings.innerText - donation_input;
+            if(savings_left < 0 || +total_savings.innerText === 0){
+                alert("Sorry!!! you don't have enough balance.");
+            }else{
+                cash.innerText = +cash.innerText + donation_input;
+                total_savings.innerText = savings_left;
+            }
+            // my_modal_1.showModal();
         }
     })
 })
