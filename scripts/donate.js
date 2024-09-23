@@ -1,6 +1,7 @@
 const donate_buttons = document.querySelectorAll("#donate_btn");
 const total_savings = document.getElementById("savings");
 const transactions_history = document.getElementById("transactions");
+const empty_message = document.querySelector(".empty_message");
 
 // input validation
 function input_valid(input) {
@@ -27,6 +28,7 @@ function get_donation_history(e, donation) {
     ).innerText;
   const title_shortened = title.substr(title.indexOf("for"), title.length);
 
+  empty_message.style.display = "none";
   const li = document.createElement("li");
   li.innerHTML = `
         <h3 class="text-xl font-bold">
@@ -36,7 +38,6 @@ function get_donation_history(e, donation) {
             Date : ${date_time}
         </p>`;
   li.className = "border-2 border-light_border rounded-2xl p-5 sm:p-8";
-  transactions_history.innerHTML = "";
   transactions_history.appendChild(li);
 }
 
