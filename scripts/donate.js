@@ -1,5 +1,4 @@
 const donate_buttons = document.querySelectorAll("#donate_btn");
-// console.log(donate_buttons);
 const total_savings = document.getElementById("savings");
 const transactions_history = document.getElementById("transactions");
 
@@ -13,21 +12,21 @@ function input_valid(input) {
   }
 }
 
-function get_datetime(e){
-    const date_time = new Date;
-    console.log(date_time);
-    return date_time;
+// get date time
+function get_datetime(e) {
+  const date_time = new Date();
+  return date_time;
 }
 
 // get donation title and show it in history
 function get_donation_title(e, donation) {
-    const date_time = get_datetime(e);
+  const date_time = get_datetime(e);
   const title =
     e.target.parentElement.parentElement.querySelector(
       "#donation_title"
     ).innerText;
   const title_shortened = title.substr(title.indexOf("for"), title.length);
-  console.log(title_shortened);
+
   const li = document.createElement("li");
   li.innerHTML = `
         <h3 class="text-xl font-bold">
@@ -36,14 +35,16 @@ function get_donation_title(e, donation) {
         <p class="font-light pt-4">
             Date : ${date_time}
         </p>`;
-    li.className = "border-2 border-light_border rounded-2xl p-5 sm:p-8";
-    transactions_history.appendChild(li);
+  li.className = "border-2 border-light_border rounded-2xl p-5 sm:p-8";
+  transactions_history.appendChild(li);
 }
 
 donate_buttons.forEach((donate_btn) => {
   donate_btn.addEventListener("click", function (e) {
     e.preventDefault();
-    const donation_input = Number(e.target.parentElement.querySelector("input").value);
+    const donation_input = Number(
+      e.target.parentElement.querySelector("input").value
+    );
     const cash = e.target.parentElement.parentElement.querySelector(".cash");
     // console.log(+donation_input);
     if (input_valid(donation_input)) {
